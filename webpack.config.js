@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const PostcssPresetEnv = require('postcss-preset-env');
 
 module.exports = {
   entry: {
@@ -35,19 +34,10 @@ module.exports = {
                 options: {
                   onlyLocals: true,
                   modules: true,
+                  importLoaders: 2,
                 },
               },
-              {
-                loader: 'postcss-loader',
-                options: {
-                  plugins: [
-                    PostcssPresetEnv({
-                      autoprefixer: { grid: true },
-                      browsers: ['> 1%', 'last 2 versions'],
-                    }),
-                  ],
-                },
-              },
+              'postcss-loader',
               'sass-loader',
             ],
           },
@@ -61,19 +51,10 @@ module.exports = {
                 loader: 'css-loader',
                 options: {
                   modules: true,
+                  importLoaders: 2,
                 },
               },
-              {
-                loader: 'postcss-loader',
-                options: {
-                  plugins: [
-                    PostcssPresetEnv({
-                      autoprefixer: { grid: true },
-                      browsers: ['> 1%', 'last 2 versions'],
-                    }),
-                  ],
-                },
-              },
+              'postcss-loader',
               'sass-loader',
               // {
               //   loader: 'sass-loader',
