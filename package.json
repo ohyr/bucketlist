@@ -24,12 +24,14 @@
     "sass": "^1.26.10",
     "sass-loader": "^9.0.2",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "build": "yarn run clean && webpack --mode production",
+    "start": "webpack-dev-server --config ./webpack/webpack.config.js --mode development --progress",
+    "build": "yarn run clean && webpack --config ./webpack/webpack.config.js --mode production",
     "clean": "rm -rf dist",
-    "watch": "webpack --mode development --watch"
+    "watch": "webpack --config ./webpack/webpack.config.js --mode development --watch "
   },
   "browserslist": [
     "> 0.25%",
