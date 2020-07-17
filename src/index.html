@@ -1,3 +1,4 @@
+<% const styles = require('./style.scss'); %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,10 @@
   <title>Bucketlist</title>
 </head>
 <body>
-  <div class="foo">Bucketlist</div>
+  <h1 class="<%= styles.mainTitle %>">Bucketlist</h1>
+  <input class="<%= styles.inputText %> js-inputText" type="text" placeholder="버킷리스트 입력">
+  <button class="<%= styles.inputButton%> js-btn">추가</button>
+  <ul class="<%= styles.bucketlist %> js-bucketlist"></ul>
 </body>
-<script src="../dist/main.js"></script>
+
 </html>

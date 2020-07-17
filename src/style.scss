@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+.mainTitle {
+  text-align: center;
+  background: linear-gradient(to bottom, coral, red);
+  color: white;
+}
+.inputText {
+  margin: 0;
+  padding: 8px;
+  width: 75%;
+  float: left;
+
+  font-size: large;
+}
+.inputButton {
+  padding: 8px;
+  width: 25%;
+  float: left;
+
+  color: white;
+  background-color: lightsalmon;
+  font-size: large;
+}
+.bucketlist {
+  font-size: large;
+  font-style: initial;
+}
+.bucketlist li {
+  padding: 8px;
+
+  user-select: none;
+}
+
+/*
+// Todo: Need to fix
+.bucketlist li.checked {
+  text-decoration: line-through;
+}
+*/
