@@ -15,6 +15,8 @@ function storeBucket() {
 
 const addBucketItem = (li, ul) => ul.appendChild(li);
 
+function initTextBox() { document.querySelector('.js-inputText').value = ''; }
+
 function makeBucketItem(text) {
   const li = document.createElement('li');
   const createdDate = new Date();
@@ -27,12 +29,14 @@ function makeBucketItem(text) {
 
 function btnHandler(e) {
   e.preventDefault();
+  const inputText = document.querySelector('.js-inputText').value;
+  if (inputText === '') return;
 
   const ul = document.querySelector('.js-bucketlist');
-  const inputText = document.querySelector('.js-inputText').value;
   const li = makeBucketItem(inputText);
 
   addBucketItem(li, ul);
+  initTextBox();
 }
 
 function init() {
